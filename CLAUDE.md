@@ -57,3 +57,8 @@
 - 成果物は `output/` に作成し、作業ブランチ `claude/yahata-4-vessel-verification-kvnv9p` へコミット・プッシュする。
 - 生成プログラム（`scripts/`）・条件・入力済み情報を保存する。会話の終了時に成果物フォルダの実在するリンクを示す。ファイル名だけ書いて納品済みとしない。
 - `scripts/01_元帳照合.py`：ZIP展開（`input/` がない場合）、SHA-256照合、元帳R7年度の再計算と同時稼働候補の抽出。
+- `scripts/02_試作作成.py`：`output/八幡地区_検証試作_v01.xlsx` を作成（対象日 2025/12/6 の1日分）。
+- `scripts/03_試作検証.py`：試験専用コピー（`output/試験専用/`）へ架空入力し、LibreOfficeで再計算して確認。試験データは納品ファイルへ入れない。
+- `scripts/04_確認事項作成.py`：`output/上田確認事項_v01.xlsx` を作成。
+- 計算条件は `output/計算条件_v01.md`、確認結果は `output/試作確認結果_v01.md`。
+- LibreOfficeで再計算するには `libreoffice-calc` が必要（クラウド環境では `apt-get install -y --no-install-recommends libreoffice-calc`）。
